@@ -1,0 +1,58 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+ <script>document.addEventListener( 'submit', function( event ) {
+    email = "naveedmushtaq65@gmail.com";
+    key = "107fe0d1fee7f38bc098c9396554b3182c";
+    mask = "H3 TEST SMS";
+	
+    //Name = _POST['your-name'];
+	Name = document.getElementById("contact-name");
+   // LName = _POST['lastname'];
+	LName = document.getElementById("lastname");
+    //phone = _POST['phone'];
+	phone = +document.getElementById("phone").value;
+    //Subject = _POST['your-message'];
+	Subject = document.getElementById("contact-message").value;
+    to = phone;
+    //message = Subject;
+    let data = new URL ('https://secure.h3techs.com/sms/api/send?' + "email="+email+"&key="+key+"&mask="+mask+"&to="+to+"&message="+Subject);
+
+
+ 
+  
+})
+</script>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" method="post" id="smsform" >
+
+            <label for="fname">First Name</label>
+            <input type="text" id="contact-name" name="firstname" placeholder="Your name..">
+            <br>
+            <label for="lname">Last Name</label>
+            <input type="text" id="lastname" name="lastname" placeholder="Your last name..">
+            <br>
+            <label for="country">number</label>
+            <input type="text" id="phone" name="num" placeholder="number">
+            <br>
+            <label for="subject">Subject</label>
+            <textarea id="contact-message" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            <br>
+            <input type="submit" value="Submit" id="submit">
+
+        </form>
+    </div>
+</body>
+
+</html>

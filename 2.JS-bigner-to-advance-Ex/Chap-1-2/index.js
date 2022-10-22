@@ -2,10 +2,13 @@
 let aaa = "Hello";
 aaa = "world";
 console.log(aaa);
+
+
 //5. What will be logged to the console?
 let aba = "world";
 let bab = `Hello ${aba}!`;
 console.log(bab);
+
 //6. What is the value of a? 
 let ac = "Hello";
 ac = prompt("world");
